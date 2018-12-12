@@ -10,7 +10,7 @@
 		3DF8878A21BF5EE20000611F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8878921BF5EE20000611F /* main.swift */; };
 		3DF8879321BF60360000611F /* libtensorflow_framework.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879121BF60360000611F /* libtensorflow_framework.so */; };
 		3DF8879421BF60360000611F /* libtensorflow.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879221BF60360000611F /* libtensorflow.so */; };
-		3DF8879721BF60A10000611F /* Adam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8879621BF60A10000611F /* Adam.swift */; };
+		3DF8879721BF60A10000611F /* AdamOptimizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8879621BF60A10000611F /* AdamOptimizer.swift */; };
 		3DF8879921BF60C30000611F /* Optimizer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8879821BF60C30000611F /* Optimizer.swift */; };
 		3DF8879C21BF64380000611F /* MathSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8879B21BF64380000611F /* MathSymbols.swift */; };
 		3DF8879E21BF649A0000611F /* Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8879D21BF649A0000611F /* Ops.swift */; };
@@ -34,7 +34,7 @@
 		3DF8878921BF5EE20000611F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3DF8879121BF60360000611F /* libtensorflow_framework.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtensorflow_framework.so; path = "../../../../../../Library/Developer/Toolchains/swift-tensorflow-DEVELOPMENT-2018-12-04-a.xctoolchain/usr/lib/swift/macosx/libtensorflow_framework.so"; sourceTree = "<group>"; };
 		3DF8879221BF60360000611F /* libtensorflow.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtensorflow.so; path = "../../../../../../Library/Developer/Toolchains/swift-tensorflow-DEVELOPMENT-2018-12-04-a.xctoolchain/usr/lib/swift/macosx/libtensorflow.so"; sourceTree = "<group>"; };
-		3DF8879621BF60A10000611F /* Adam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Adam.swift; sourceTree = "<group>"; };
+		3DF8879621BF60A10000611F /* AdamOptimizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdamOptimizer.swift; sourceTree = "<group>"; };
 		3DF8879821BF60C30000611F /* Optimizer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Optimizer.swift; sourceTree = "<group>"; };
 		3DF8879B21BF64380000611F /* MathSymbols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathSymbols.swift; sourceTree = "<group>"; };
 		3DF8879D21BF649A0000611F /* Ops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ops.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 		3DF8879521BF607A0000611F /* Optimizers */ = {
 			isa = PBXGroup;
 			children = (
-				3DF8879621BF60A10000611F /* Adam.swift */,
+				3DF8879621BF60A10000611F /* AdamOptimizer.swift */,
 				3DF8879821BF60C30000611F /* Optimizer.swift */,
 			);
 			path = Optimizers;
@@ -174,7 +174,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF8879721BF60A10000611F /* Adam.swift in Sources */,
+				3DF8879721BF60A10000611F /* AdamOptimizer.swift in Sources */,
 				3DF8879921BF60C30000611F /* Optimizer.swift in Sources */,
 				3DF8878A21BF5EE20000611F /* main.swift in Sources */,
 				3DF887A121BF70890000611F /* Types.swift in Sources */,

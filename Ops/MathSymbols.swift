@@ -22,7 +22,6 @@ func e_i<T: Numeric, Ti: TensorFlowInteger>(_ x: Tensor<Ti>, _ n: Int32) -> Tens
 
 postfix operator ⊺
 extension Tensor {
-
     @inlinable @inline(__always)
     static postfix func ⊺ (lhs: Tensor) -> Tensor {
         return lhs.transposed()
@@ -32,12 +31,10 @@ extension Tensor {
 prefix operator ∏
 prefix operator ∑
 extension Tensor where Scalar : Numeric {
-    
     @inlinable @inline(__always)
     static prefix func ∏ (_ x: Tensor) -> Tensor {
         return x.product(squeezingAxes: -1)
     }
-    
     @inlinable @inline(__always)
     static prefix func ∑ (_ x: Tensor) -> Tensor {
         return x.sum(squeezingAxes: -1)
