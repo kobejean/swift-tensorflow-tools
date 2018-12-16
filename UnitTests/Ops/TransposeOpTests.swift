@@ -1,31 +1,32 @@
 //
-//  SwiftForTensorFlowToolsUnitTests.swift
+//  TransposeOpTests.swift
 //  SwiftForTensorFlowToolsUnitTests
 //
 //  Created by Jean Flaherty on 12/15/18.
 //  Copyright © 2018 Jean Flaherty. All rights reserved.
 //
+
 @testable import SwiftForTensorFlowTools
 import TensorFlow
 import XCTest
 
-class PiProductUnitTests: XCTestCase {
+class TransposeOpTests: XCTestCase {
 
-    func testPiProduct() {
-        let x = Tensor([1,2,3,4])
-        let expected = Tensor([24])
-        let result = ∏x
+    func testTranspose() {
+        let x = Tensor<Float>([[1,2], [3,4]])
+        let expected = Tensor<Float>([[1,3], [2,4]])
+        let result = x⊺
         XCTAssertEqual(result, expected)
     }
     
-    func testPiProductPerformance256x256() {
+    func testTransposePerformance256x256() {
         var x = Tensor<Float>(randomUniform: [256, 256])
-        self.measure { ∏x }
+        self.measure { x⊺ }
     }
     
-    func testPiProductPerformance512x512() {
+    func testTransposePerformance512x512() {
         let x = Tensor<Float>(randomUniform: [512, 512])
-        self.measure { ∏x }
+        self.measure { x⊺ }
     }
 
 }

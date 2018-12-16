@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3D33B9AB21C6D7BA009F52D4 /* TransposeOpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33B9A821C6D6F1009F52D4 /* TransposeOpTests.swift */; };
+		3D33B9AD21C6D887009F52D4 /* SquareRootOpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33B9AC21C6D887009F52D4 /* SquareRootOpTests.swift */; };
+		3D33B9AF21C6D9D1009F52D4 /* OneHotOpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33B9AE21C6D9D1009F52D4 /* OneHotOpTests.swift */; };
+		3D33B9B321C6DEA4009F52D4 /* MeanOpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D33B9B221C6DEA4009F52D4 /* MeanOpTests.swift */; };
 		3DF8878A21BF5EE20000611F /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8878921BF5EE20000611F /* main.swift */; };
 		3DF8879321BF60360000611F /* libtensorflow_framework.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879121BF60360000611F /* libtensorflow_framework.so */; };
 		3DF8879421BF60360000611F /* libtensorflow.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879221BF60360000611F /* libtensorflow.so */; };
@@ -15,10 +19,10 @@
 		3DF8879C21BF64380000611F /* MathSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8879B21BF64380000611F /* MathSymbols.swift */; };
 		3DF8879E21BF649A0000611F /* Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8879D21BF649A0000611F /* Ops.swift */; };
 		3DF887A121BF70890000611F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887A021BF70890000611F /* Types.swift */; };
-		3DF887A921C60F520000611F /* PiProductUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887A821C60F520000611F /* PiProductUnitTests.swift */; };
+		3DF887A921C60F520000611F /* PiProductOpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887A821C60F520000611F /* PiProductOpTests.swift */; };
 		3DF887AE21C612140000611F /* libtensorflow_framework.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879121BF60360000611F /* libtensorflow_framework.so */; };
 		3DF887AF21C612140000611F /* libtensorflow.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879221BF60360000611F /* libtensorflow.so */; };
-		3DF887B121C622EF0000611F /* SummationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887B021C622EF0000611F /* SummationUnitTests.swift */; };
+		3DF887B121C622EF0000611F /* SummationOpTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887B021C622EF0000611F /* SummationOpTests.swift */; };
 		3DF887B421C629250000611F /* ParameterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887B221C624B20000611F /* ParameterGroup.swift */; };
 /* End PBXBuildFile section */
 
@@ -35,6 +39,10 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3D33B9A821C6D6F1009F52D4 /* TransposeOpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransposeOpTests.swift; sourceTree = "<group>"; };
+		3D33B9AC21C6D887009F52D4 /* SquareRootOpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SquareRootOpTests.swift; sourceTree = "<group>"; };
+		3D33B9AE21C6D9D1009F52D4 /* OneHotOpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OneHotOpTests.swift; sourceTree = "<group>"; };
+		3D33B9B221C6DEA4009F52D4 /* MeanOpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeanOpTests.swift; sourceTree = "<group>"; };
 		3DF8878621BF5EE20000611F /* SwiftForTensorFlowTools */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = SwiftForTensorFlowTools; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DF8878921BF5EE20000611F /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		3DF8879121BF60360000611F /* libtensorflow_framework.so */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libtensorflow_framework.so; path = "../../../../../../Library/Developer/Toolchains/swift-tensorflow-DEVELOPMENT-2018-12-04-a.xctoolchain/usr/lib/swift/macosx/libtensorflow_framework.so"; sourceTree = "<group>"; };
@@ -45,9 +53,9 @@
 		3DF8879D21BF649A0000611F /* Ops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ops.swift; sourceTree = "<group>"; };
 		3DF887A021BF70890000611F /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
 		3DF887A621C60F520000611F /* SwiftForTensorFlowToolsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftForTensorFlowToolsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		3DF887A821C60F520000611F /* PiProductUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiProductUnitTests.swift; sourceTree = "<group>"; };
+		3DF887A821C60F520000611F /* PiProductOpTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiProductOpTests.swift; sourceTree = "<group>"; };
 		3DF887AA21C60F520000611F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3DF887B021C622EF0000611F /* SummationUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummationUnitTests.swift; sourceTree = "<group>"; };
+		3DF887B021C622EF0000611F /* SummationOpTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummationOpTests.swift; sourceTree = "<group>"; };
 		3DF887B221C624B20000611F /* ParameterGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -73,6 +81,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3D33B9B021C6DBDA009F52D4 /* Ops */ = {
+			isa = PBXGroup;
+			children = (
+				3D33B9A821C6D6F1009F52D4 /* TransposeOpTests.swift */,
+				3D33B9B221C6DEA4009F52D4 /* MeanOpTests.swift */,
+				3D33B9AE21C6D9D1009F52D4 /* OneHotOpTests.swift */,
+				3D33B9AC21C6D887009F52D4 /* SquareRootOpTests.swift */,
+				3DF887A821C60F520000611F /* PiProductOpTests.swift */,
+				3DF887B021C622EF0000611F /* SummationOpTests.swift */,
+			);
+			path = Ops;
+			sourceTree = "<group>";
+		};
+		3D33B9B121C6DD0F009F52D4 /* Optimizers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Optimizers;
+			sourceTree = "<group>";
+		};
 		3DF8877D21BF5EE20000611F = {
 			isa = PBXGroup;
 			children = (
@@ -142,8 +170,8 @@
 		3DF887A721C60F520000611F /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
-				3DF887A821C60F520000611F /* PiProductUnitTests.swift */,
-				3DF887B021C622EF0000611F /* SummationUnitTests.swift */,
+				3D33B9B021C6DBDA009F52D4 /* Ops */,
+				3D33B9B121C6DD0F009F52D4 /* Optimizers */,
 				3DF887AA21C60F520000611F /* Info.plist */,
 			);
 			path = UnitTests;
@@ -252,8 +280,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3DF887A921C60F520000611F /* PiProductUnitTests.swift in Sources */,
-				3DF887B121C622EF0000611F /* SummationUnitTests.swift in Sources */,
+				3D33B9AD21C6D887009F52D4 /* SquareRootOpTests.swift in Sources */,
+				3DF887A921C60F520000611F /* PiProductOpTests.swift in Sources */,
+				3DF887B121C622EF0000611F /* SummationOpTests.swift in Sources */,
+				3D33B9AF21C6D9D1009F52D4 /* OneHotOpTests.swift in Sources */,
+				3D33B9AB21C6D7BA009F52D4 /* TransposeOpTests.swift in Sources */,
+				3D33B9B321C6DEA4009F52D4 /* MeanOpTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
