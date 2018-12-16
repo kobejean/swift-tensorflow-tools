@@ -23,8 +23,7 @@ class AdamOptimizer<Parameters: ParameterGroup>: Optimizer where Parameters.Para
         self.βm = βm
         self.βv = βv
         self.ϵ = ϵ
-        var zero = θ
-        zero.update(withGradients: θ) { (m_k, θ_k) in m_k = 0 * θ_k }
+        let zero = θ.zeroed()
         self.m = zero
         self.v = zero
     }
@@ -33,14 +32,11 @@ class AdamOptimizer<Parameters: ParameterGroup>: Optimizer where Parameters.Para
     func optimize(_ θ: inout Parameters, _ dθ: Parameters) {
         m.update(withGradients: dθ) { (mk, dθk) in mk = βm * mk + (1 - βm) * dθk }
         v.update(withGradients: dθ) { (vk, dθk) in vk = βv * vk + (1 - βv) * dθk * dθk }
-        var θ_delta = m
-        θ_delta.update(withGradients: v) { (θk_delta, vk) in
-            let mk = θk_delta
+        θ -= combine(m, v) { (mk, vk) in
             let m_hat = mk / (1 - βm)
             let v_hat = vk / (1 - βv)
-            θk_delta = α * m_hat / (√v_hat + ϵ)
+            return α * m_hat / (√v_hat + ϵ)
         }
-        θ.update(withGradients: θ_delta, -=)
     }
 }
 

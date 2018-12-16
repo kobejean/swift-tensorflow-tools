@@ -19,6 +19,7 @@
 		3DF887AE21C612140000611F /* libtensorflow_framework.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879121BF60360000611F /* libtensorflow_framework.so */; };
 		3DF887AF21C612140000611F /* libtensorflow.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879221BF60360000611F /* libtensorflow.so */; };
 		3DF887B121C622EF0000611F /* SummationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887B021C622EF0000611F /* SummationUnitTests.swift */; };
+		3DF887B421C629250000611F /* ParameterGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887B221C624B20000611F /* ParameterGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -47,6 +48,7 @@
 		3DF887A821C60F520000611F /* PiProductUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiProductUnitTests.swift; sourceTree = "<group>"; };
 		3DF887AA21C60F520000611F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3DF887B021C622EF0000611F /* SummationUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummationUnitTests.swift; sourceTree = "<group>"; };
+		3DF887B221C624B20000611F /* ParameterGroup.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,7 +77,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF8878821BF5EE20000611F /* SwiftForTensorFlowTools */,
-				3DF887A721C60F520000611F /* SwiftForTensorFlowToolsUnitTests */,
+				3DF887A721C60F520000611F /* UnitTests */,
 				3DF8878721BF5EE20000611F /* Products */,
 				3DF8879021BF60360000611F /* Frameworks */,
 			);
@@ -132,18 +134,19 @@
 			isa = PBXGroup;
 			children = (
 				3DF887A021BF70890000611F /* Types.swift */,
+				3DF887B221C624B20000611F /* ParameterGroup.swift */,
 			);
 			path = Other;
 			sourceTree = "<group>";
 		};
-		3DF887A721C60F520000611F /* SwiftForTensorFlowToolsUnitTests */ = {
+		3DF887A721C60F520000611F /* UnitTests */ = {
 			isa = PBXGroup;
 			children = (
 				3DF887A821C60F520000611F /* PiProductUnitTests.swift */,
 				3DF887B021C622EF0000611F /* SummationUnitTests.swift */,
 				3DF887AA21C60F520000611F /* Info.plist */,
 			);
-			path = SwiftForTensorFlowToolsUnitTests;
+			path = UnitTests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -235,6 +238,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3DF887B421C629250000611F /* ParameterGroup.swift in Sources */,
 				3DF8879721BF60A10000611F /* AdamOptimizer.swift in Sources */,
 				3DF8879921BF60C30000611F /* Optimizer.swift in Sources */,
 				3DF8878A21BF5EE20000611F /* main.swift in Sources */,
@@ -403,7 +407,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q74A2VY23K;
-				INFOPLIST_FILE = SwiftForTensorFlowToolsUnitTests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -423,7 +427,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_TEAM = Q74A2VY23K;
-				INFOPLIST_FILE = SwiftForTensorFlowToolsUnitTests/Info.plist;
+				INFOPLIST_FILE = UnitTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
