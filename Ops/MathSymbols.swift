@@ -16,8 +16,20 @@ func μ<T: Numeric>(_ x: Tensor<T>) -> T {
 }
 
 @inlinable @inline(__always)
-func e_i<T: Numeric, Ti: TensorFlowInteger>(_ x: Tensor<Ti>, _ n: Int32) -> Tensor<T> {
-    return oneHot(indices: x, depth: n, onValue: 1, offValue: 0)
+func μ<T: Numeric>(_ x: Tensor<T>, alongAxes: Int32...) -> Tensor<T> {
+    let indices = Tensor(alongAxes)
+    return Raw.mean(x, reductionIndices: indices, keepDims: true)
+}
+
+@inlinable @inline(__always)
+func μ<T: Numeric>(_ x: Tensor<T>, reducingAxes: Int32...) -> Tensor<T> {
+    let indices = Tensor(reducingAxes)
+    return Raw.mean(x, reductionIndices: indices, keepDims: false)
+}
+
+@inlinable @inline(__always)
+func e_i<T: Numeric>(_ x: Tensor<Int32>, _ n: Int32) -> Tensor<T> {
+    return Tensor<T>(oneHotAtIndices: x, depth: n)
 }
 
 postfix operator ⊺
