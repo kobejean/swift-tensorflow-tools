@@ -15,6 +15,10 @@
 		3DF8879C21BF64380000611F /* MathSymbols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8879B21BF64380000611F /* MathSymbols.swift */; };
 		3DF8879E21BF649A0000611F /* Ops.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF8879D21BF649A0000611F /* Ops.swift */; };
 		3DF887A121BF70890000611F /* Types.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887A021BF70890000611F /* Types.swift */; };
+		3DF887A921C60F520000611F /* PiProductUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887A821C60F520000611F /* PiProductUnitTests.swift */; };
+		3DF887AE21C612140000611F /* libtensorflow_framework.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879121BF60360000611F /* libtensorflow_framework.so */; };
+		3DF887AF21C612140000611F /* libtensorflow.so in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DF8879221BF60360000611F /* libtensorflow.so */; };
+		3DF887B121C622EF0000611F /* SummationUnitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DF887B021C622EF0000611F /* SummationUnitTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -39,6 +43,10 @@
 		3DF8879B21BF64380000611F /* MathSymbols.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MathSymbols.swift; sourceTree = "<group>"; };
 		3DF8879D21BF649A0000611F /* Ops.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ops.swift; sourceTree = "<group>"; };
 		3DF887A021BF70890000611F /* Types.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Types.swift; sourceTree = "<group>"; };
+		3DF887A621C60F520000611F /* SwiftForTensorFlowToolsUnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SwiftForTensorFlowToolsUnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DF887A821C60F520000611F /* PiProductUnitTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PiProductUnitTests.swift; sourceTree = "<group>"; };
+		3DF887AA21C60F520000611F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3DF887B021C622EF0000611F /* SummationUnitTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SummationUnitTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,6 +59,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		3DF887A321C60F520000611F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF887AE21C612140000611F /* libtensorflow_framework.so in Frameworks */,
+				3DF887AF21C612140000611F /* libtensorflow.so in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -58,6 +75,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF8878821BF5EE20000611F /* SwiftForTensorFlowTools */,
+				3DF887A721C60F520000611F /* SwiftForTensorFlowToolsUnitTests */,
 				3DF8878721BF5EE20000611F /* Products */,
 				3DF8879021BF60360000611F /* Frameworks */,
 			);
@@ -67,6 +85,7 @@
 			isa = PBXGroup;
 			children = (
 				3DF8878621BF5EE20000611F /* SwiftForTensorFlowTools */,
+				3DF887A621C60F520000611F /* SwiftForTensorFlowToolsUnitTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -117,6 +136,16 @@
 			path = Other;
 			sourceTree = "<group>";
 		};
+		3DF887A721C60F520000611F /* SwiftForTensorFlowToolsUnitTests */ = {
+			isa = PBXGroup;
+			children = (
+				3DF887A821C60F520000611F /* PiProductUnitTests.swift */,
+				3DF887B021C622EF0000611F /* SummationUnitTests.swift */,
+				3DF887AA21C60F520000611F /* Info.plist */,
+			);
+			path = SwiftForTensorFlowToolsUnitTests;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -137,17 +166,38 @@
 			productReference = 3DF8878621BF5EE20000611F /* SwiftForTensorFlowTools */;
 			productType = "com.apple.product-type.tool";
 		};
+		3DF887A521C60F520000611F /* SwiftForTensorFlowToolsUnitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3DF887AB21C60F520000611F /* Build configuration list for PBXNativeTarget "SwiftForTensorFlowToolsUnitTests" */;
+			buildPhases = (
+				3DF887A221C60F520000611F /* Sources */,
+				3DF887A321C60F520000611F /* Frameworks */,
+				3DF887A421C60F520000611F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SwiftForTensorFlowToolsUnitTests;
+			productName = SwiftForTensorFlowToolsUnitTests;
+			productReference = 3DF887A621C60F520000611F /* SwiftForTensorFlowToolsUnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		3DF8877E21BF5EE20000611F /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				DefaultBuildSystemTypeForWorkspace = Original;
 				LastSwiftUpdateCheck = 1010;
 				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "Jean Flaherty";
 				TargetAttributes = {
 					3DF8878521BF5EE20000611F = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					3DF887A521C60F520000611F = {
 						CreatedOnToolsVersion = 10.1;
 					};
 				};
@@ -165,9 +215,20 @@
 			projectRoot = "";
 			targets = (
 				3DF8878521BF5EE20000611F /* SwiftForTensorFlowTools */,
+				3DF887A521C60F520000611F /* SwiftForTensorFlowToolsUnitTests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		3DF887A421C60F520000611F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		3DF8878221BF5EE20000611F /* Sources */ = {
@@ -180,6 +241,15 @@
 				3DF887A121BF70890000611F /* Types.swift in Sources */,
 				3DF8879E21BF649A0000611F /* Ops.swift in Sources */,
 				3DF8879C21BF64380000611F /* MathSymbols.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3DF887A221C60F520000611F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3DF887A921C60F520000611F /* PiProductUnitTests.swift in Sources */,
+				3DF887B121C622EF0000611F /* SummationUnitTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -327,6 +397,46 @@
 			};
 			name = Release;
 		};
+		3DF887AC21C60F520000611F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q74A2VY23K;
+				INFOPLIST_FILE = SwiftForTensorFlowToolsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+					"/Library/Developer/Toolchains/swift-latest/usr/lib/swift/macosx",
+				);
+				OTHER_LDFLAGS = "-lpython";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobejean.SwiftForTensorFlowToolsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		3DF887AD21C60F520000611F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_TEAM = Q74A2VY23K;
+				INFOPLIST_FILE = SwiftForTensorFlowToolsUnitTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+					"/Library/Developer/Toolchains/swift-latest/usr/lib/swift/macosx",
+				);
+				OTHER_LDFLAGS = "-lpython";
+				PRODUCT_BUNDLE_IDENTIFIER = com.kobejean.SwiftForTensorFlowToolsUnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -344,6 +454,15 @@
 			buildConfigurations = (
 				3DF8878E21BF5EE20000611F /* Debug */,
 				3DF8878F21BF5EE20000611F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3DF887AB21C60F520000611F /* Build configuration list for PBXNativeTarget "SwiftForTensorFlowToolsUnitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3DF887AC21C60F520000611F /* Debug */,
+				3DF887AD21C60F520000611F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

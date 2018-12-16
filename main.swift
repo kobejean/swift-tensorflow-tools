@@ -19,3 +19,5 @@ let θ = ModelParameters()
 
 print(∑θ.w1)
 print(∑θ.w1⊺)
+print(∏θ.w1)
+print(∏θ.w1⊺)

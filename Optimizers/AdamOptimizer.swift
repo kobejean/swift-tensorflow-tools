@@ -1,5 +1,5 @@
 //
-//  Adam.swift
+//  AdamOptimizer.swift
 //  SwiftForTensorFlowTools
 //
 //  Created by Jean Flaherty on 12/10/18.
