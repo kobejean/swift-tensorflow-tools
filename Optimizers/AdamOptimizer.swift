@@ -17,13 +17,14 @@ class AdamOptimizer<Parameters: ParameterGroup>: Optimizer where Parameters.Para
     let ϵ: Scalar
     var m: Parameters
     var v: Parameters
+    var t: Scalar = 0
     
     init(_ θ: Parameters, _ α: Scalar = 0.001, _ βm: Scalar = 0.9, _ βv: Scalar = 0.999, _ ϵ: Scalar = 1e-08) {
         self.α = α
         self.βm = βm
         self.βv = βv
         self.ϵ = ϵ
-        let zero = θ.zeroed()
+        let zero = θ.updated(withGradients: θ) { (parameter, _) in parameter = 0 * parameter }
         self.m = zero
         self.v = zero
     }
@@ -32,11 +33,14 @@ class AdamOptimizer<Parameters: ParameterGroup>: Optimizer where Parameters.Para
     func optimize(_ θ: inout Parameters, _ dθ: Parameters) {
         m.update(withGradients: dθ) { (mk, dθk) in mk = βm * mk + (1 - βm) * dθk }
         v.update(withGradients: dθ) { (vk, dθk) in vk = βv * vk + (1 - βv) * dθk * dθk }
+        let βm_t = pow(βm,t)
+        let βv_t = pow(βv,t)
         θ -= combine(m, v) { (mk, vk) in
-            let m_hat = mk / (1 - βm)
-            let v_hat = vk / (1 - βv)
+            let m_hat = mk / (1 - βm_t)
+            let v_hat = vk / (1 - βv_t)
             return α * m_hat / (√v_hat + ϵ)
         }
+        t += 1
     }
 }
 
